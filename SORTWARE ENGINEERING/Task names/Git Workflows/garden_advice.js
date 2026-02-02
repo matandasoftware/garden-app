@@ -4,20 +4,33 @@
 // TODO: Replace hardcoded values with constants or configuration object
 let currentMonth = 5; // May
 
-// TODO: Create a function to get season based on month
-if (currentMonth >= 3 && currentMonth <= 5) {
+function getSeason(month) {
+    if (month >= 3 && month <= 5) {
+        return "Spring";
+    } else if (month >= 6 && month <= 8) {
+        return "Summer";
+    } else if (month >= 9 && month <= 11) {
+        return "Autumn";
+    } else {
+        return "Winter";
+    }
+}
+
+let currentSeason = getSeason(currentMonth);
+
+if (currentSeason === "Spring") {
     console.log("Season: Spring");
     console.log("Gardening Tips:");
     console.log("- Plant tomatoes, peppers, and cucumbers");
     console.log("- Prepare soil with compost");
     console.log("- Start weeding regularly");
-} else if (currentMonth >= 6 && currentMonth <= 8) {
+} else if (currentSeason === "Summer") {
     console.log("Season: Summer");
     console.log("Gardening Tips:");
     console.log("- Water plants early morning or evening");
     console.log("- Mulch to retain moisture");
     console.log("- Harvest vegetables regularly");
-} else if (currentMonth >= 9 && currentMonth <= 11) {
+} else if (currentSeason === "Autumn") {
     console.log("Season: Autumn");
     console.log("Gardening Tips:");
     console.log("- Plant spring bulbs");
