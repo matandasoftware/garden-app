@@ -1,48 +1,33 @@
-// Get user input for season and plant type
-let season = prompt("Enter the season (summer, winter, spring, autumn):"); // User input for season
-let plantType = prompt("Enter the plant type (flower, vegetable):"); // User input for plant type
+// Hardcoded values for the season and plant type
+let season = "summer"; // TODO: Replace with prompt() to allow user interaction.
+let plantType = "flower"; // TODO: Replace with prompt() to allow user interaction.
 
-/**
- * Get gardening advice based on the season
- * @param {string} season - The current season
- * @returns {string} - Advice for the given season
- */
-function getSeasonAdvice(season) {
-    if (season === "summer") {
-        return "Water your plants regularly and provide some shade.\n";
-    } else if (season === "winter") {
-        return "Protect your plants from frost with covers.\n";
-    } else {
-        return "No advice for this season.\n";
-    }
+// Variable to hold gardening advice
+let advice = "";
+
+// Determine advice based on the season
+if (season === "summer") {
+    advice += "Water your plants regularly and provide some shade.\n";
+} else if (season === "winter") {
+    advice += "Protect your plants from frost with covers.\n";
+} else {
+    advice += "No advice for this season.\n";
 }
 
-/**
- * Get gardening advice based on the plant type
- * @param {string} plantType - The type of plant
- * @returns {string} - Advice for the given plant type
- */
-function getPlantTypeAdvice(plantType) {
-    if (plantType === "flower") {
-        return "Use fertiliser to encourage blooms.";
-    } else if (plantType === "vegetable") {
-        return "Keep an eye out for pests!";
-    } else {
-        return "No advice for this type of plant.";
-    }
+// Determine advice based on the plant type
+if (plantType === "flower") {
+    advice += "Use fertiliser to encourage blooms.";
+} else if (plantType === "vegetable") {
+    advice += "Keep an eye out for pests!";
+} else {
+    advice += "No advice for this type of plant.";
 }
 
-/**
- * Display the complete gardening advice
- * @param {string} seasonAdvice - Advice based on season
- * @param {string} plantAdvice - Advice based on plant type
- */
-function displayAdvice(seasonAdvice, plantAdvice) {
-    const completeAdvice = seasonAdvice + plantAdvice;
-    console.log(completeAdvice);
-}
+// Log the generated advice to the console
+console.log(advice);
 
-// Generate and display advice
-const seasonAdvice = getSeasonAdvice(season);
-const plantAdvice = getPlantTypeAdvice(plantType);
-displayAdvice(seasonAdvice, plantAdvice);
+// TODO: Examples of possible features to add:
+// - Add detailed comments explaining each block of code.
+// - Refactor the code into functions for better readability and modularity.
+// - Store advice in an object for multiple plants and seasons.
+// - Suggest plants that thrive in the given season.
