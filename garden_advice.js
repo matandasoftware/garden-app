@@ -46,3 +46,24 @@ function displayAdvice(seasonAdvice, plantAdvice) {
 const seasonAdvice = getSeasonAdvice(season);
 const plantAdvice = getPlantTypeAdvice(plantType);
 displayAdvice(seasonAdvice, plantAdvice);
+
+// TODO LIST - Implementation History:
+// ✅ COMPLETED: Replace hardcoded season and plant type with prompt() for user interaction
+//    - Implemented in Issue #3 / PR #5
+//    - Lines 2-3: Added prompt() for dynamic user input
+//    - Date: February 3, 2026
+//
+// ✅ COMPLETED: Refactor code into functions for better readability and modularity
+//    - Implemented in Issue #4 / PR #6  
+//    - Created getSeasonAdvice() function (lines 10-18)
+//    - Created getPlantTypeAdvice() function (lines 25-33)
+//    - Created displayAdvice() function (lines 40-43)
+//    - Added JSDoc comments for all functions
+//    - Date: February 3, 2026
+//
+// FUTURE ENHANCEMENTS (Not yet implemented):
+// - Add detailed inline comments explaining each block of code logic
+// - Store advice in an object/database for multiple plants and seasons
+// - Suggest plants that thrive in the given season
+// - Add input validation for season and plant type
+// - Create a web UI instead of console output
